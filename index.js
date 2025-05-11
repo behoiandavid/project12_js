@@ -1,11 +1,6 @@
 function isValidEmail(email) {
-    const checkEmail = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+    return /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(email)
 
-    if (checkEmail.test(email)) {
-        return true
-    } else {
-        return false
-    };
 };
 
 console.log(isValidEmail('example@example.com')) // Повинно вивести: true
@@ -13,13 +8,9 @@ console.log(isValidEmail('invalid-email'))       // Повинно вивест�
 
 
 function isValidUrl(url) {
-    const checkURL = /^(https?:\/\/)?(www\.)?[a-z0-9\-]+(\.[a-z]{2,})(\/\S*)?$/i;
+    return /^(https?:\/\/)?(www\.)?[a-z0-9\-]+(\.[a-z]{2,})(\/\S*)?$/i.test(url)
 
-    if (checkURL.test(url)) {
-        return true
-    } else {
-        return false
-    };
+
 };
 
 console.log(isValidUrl('https://www.example.com')) // Повинно вивести: true
